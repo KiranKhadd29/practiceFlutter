@@ -40,6 +40,15 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
+        ////////// Images ////////////////////
+        Center(
+            child:Container(
+              width: 500,
+              height: 500,
+              child: Image.asset('assets/images/kiyalogosmall.png')),
+            )
+
+
         ////////// Buttons ////////////////////
         /*TextButton(
           child: Text('Click Here'),
@@ -56,12 +65,12 @@ class _MyHomePageState extends State<MyHomePage> {
             print('User taped the Ele-Button');
           },
         )*/
-        OutlinedButton(
+        /*OutlinedButton(
           child: Text("I'm Outlined Button"),
           onPressed: (){
             print('User taped the O-Button');
           },
-          )
+          )*/
 
 
       ////////// Text Widget ////////////////////
