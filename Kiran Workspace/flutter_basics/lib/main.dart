@@ -37,15 +37,55 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
-          title: Text('Flutter Container'),
+          title: Text('Flutter Basics'),
         ),
-        body: Center(
-            child: Container(
-                width: 100,
-                height: 100,
-                color: Colors.grey,
-                child: Center(
-                  child: Text('This is center of Flutter Container'),
-                ))));
+        body:
+        ////////// Buttons ////////////////////
+        /*TextButton(
+          child: Text('Click Here'),
+          onPressed: (){
+            print('User taped the Button');
+          },
+          onLongPress: (){
+            print('User Long pressed the Button');
+          },
+        )*/
+      /*ElevatedButton(
+          child: Text("I'm Elevated Button"),
+          onPressed: (){
+            print('User taped the Ele-Button');
+          },
+        )*/
+        OutlinedButton(
+          child: Text("I'm Outlined Button"),
+          onPressed: (){
+            print('User taped the O-Button');
+          },
+          )
+
+
+      ////////// Text Widget ////////////////////
+        /*Text("Hi, I'm a Text Widget",
+            style: TextStyle(
+              fontSize: 25,
+              color: Colors.black87,
+              fontWeight: FontWeight.w700,
+                backgroundColor: Colors.amberAccent,
+            ) */
+      ////////// Center widget and Container Widget ////////////////////
+           /* Center(
+                child: Container(
+                    width: 400,
+                    height: 300,
+                    color: Colors.grey,
+                    child: Center(
+                      child: Text('This is Text Widget of Flutter',
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.black87,
+                          fontWeight: FontWeight.w700,
+                          backgroundColor: Colors.amberAccent)
+                    )))) */
+        );
   }
 }
