@@ -58,13 +58,37 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Center(child: Text('This is center container.',style: TextStyle(color: Colors.black,fontSize: 20),))
         ),
       ),*/
-      body: Text("Text & widgets and it's style!!!",style: TextStyle(
+      //Text & widgets and it's style
+      /*body: Text("Text & widgets and it's style!!!",style: TextStyle(
         fontSize: 25,
         color: Colors.teal,
         //fontWeight: FontWeight.bold,
         fontWeight: FontWeight.w900,
         backgroundColor: Colors.black26,
-      ),),
+      ),
+      ),*/
+      //Text button
+      /*body: TextButton(
+        child: Text('Click Here!!'),
+        onPressed: () {
+          print('Text Button Tapped!');
+        },
+        onLongPress:() {
+          print('Long Pressed.');
+        },
+      ),*/
+      /*body: ElevatedButton(
+        child: Text('Elevated Button'),
+        onPressed: () {
+          print('Button Pressed.');
+        },
+      ),*/
+      body: OutlinedButton(
+        child: Text('Outlined Button'),
+        onPressed: (){
+          print('Outlined Pressed');
+        },
+      ),
     );
   }
 }
