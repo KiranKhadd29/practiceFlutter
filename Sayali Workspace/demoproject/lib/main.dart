@@ -77,18 +77,28 @@ class _MyHomePageState extends State<MyHomePage> {
           print('Long Pressed.');
         },
       ),*/
+      //Elevated Button
       /*body: ElevatedButton(
         child: Text('Elevated Button'),
         onPressed: () {
           print('Button Pressed.');
         },
       ),*/
-      body: OutlinedButton(
+      //Outlined Button
+      /*body: OutlinedButton(
         child: Text('Outlined Button'),
         onPressed: (){
           print('Outlined Pressed');
         },
-      ),
+      ),*/
+      //Add image in app
+      body: Center(
+        child: Container(
+            width: 200,
+            height: 200,
+            child: Image.asset('assets/images/ksiyaa.png')
+        ),
+      )
     );
   }
 }
