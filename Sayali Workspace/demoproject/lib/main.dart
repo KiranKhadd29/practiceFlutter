@@ -49,15 +49,22 @@ class _MyHomePageState extends State<MyHomePage> {
       /*body: Center(
         child: Text("Hello World!!!",style: TextStyle(fontSize: 25),),
       )*/
-      body: Center(
-
-        child: Container(
-            width: 250,
-            height: 100,
-            color: Colors.pinkAccent,
-          child: Center(child: Text('This is center container.',style: TextStyle(color: Colors.black,fontSize: 20),))
+      //center container with text in center
+      /*body: Center(
+          child: Container(
+              width: 250,
+              height: 100,
+              color: Colors.pinkAccent,
+              child: Center(child: Text('This is center container.',style: TextStyle(color: Colors.black,fontSize: 20),))
         ),
-      ),
+      ),*/
+      body: Text("Text & widgets and it's style!!!",style: TextStyle(
+        fontSize: 25,
+        color: Colors.teal,
+        //fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w900,
+        backgroundColor: Colors.black26,
+      ),),
     );
   }
 }
