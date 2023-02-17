@@ -40,13 +40,69 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
+      ////////// Row ////////////////////
+      Container(
+        height: 300,
+        /*
+        child: Row(
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.spaceAround,
+          children: [
+            Text('R1, style: TextStyle(fontSize: 25),),
+            Text('R2 style: TextStyle(fontSize: 25),),
+            Text('R3 style: TextStyle(fontSize: 25),),
+            Text('R4 style: TextStyle(fontSize: 25),),
+            Text('R5 style: TextStyle(fontSize: 25),),
+            ElevatedButton(onPressed: (){
+
+            },child: Text('click')
+
+            )
+          ],
+        ), */
+        ////////// Column ////////////////////
+
+        child: Column(
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            ////////// Row inside Column ////////////////////
+            Row(
+            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text('cR1', style: TextStyle(fontSize: 25),),
+              Text('cR2', style: TextStyle(fontSize: 25),),
+              Text('cR3' ,style: TextStyle(fontSize: 25),),
+              Text('cR4' ,style: TextStyle(fontSize: 25),),
+              Text('cR5' ,style: TextStyle(fontSize: 25),),
+        ],
+      ),
+
+            Text('C1', style: TextStyle(fontSize: 25),),
+            Text('C2', style: TextStyle(fontSize: 25),),
+            Text('C3', style: TextStyle(fontSize: 25),),
+            Text('C4', style: TextStyle(fontSize: 25),),
+            Text('C5', style: TextStyle(fontSize: 25),),
+            ElevatedButton(onPressed: (){
+
+            },child: Text('click')
+
+            )
+          ],
+        ),
+      )
+
         ////////// Images ////////////////////
-        Center(
+        /*Center(
             child:Container(
               width: 500,
               height: 500,
               child: Image.asset('assets/images/kiyalogosmall.png')),
-            )
+            )*/
 
 
         ////////// Buttons ////////////////////
