@@ -40,8 +40,133 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
+        ////////// Scroll View ////////////////////
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 11),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Center(
+                              child: Container(
+                                height: 200,
+                                width: 200,
+                                color: Colors.amber,
+                              ),
+                            ),
+                            Center(
+                              child: Container(
+                                height: 200,
+                                width: 200,
+                                color: Colors.blueAccent,
+                              ),
+                            ),
+                            Center(
+                              child: Container(
+                                height: 200,
+                                width: 200,
+                                color: Colors.deepOrangeAccent,
+                              ),
+                            ),
+                            Center(
+                              child: Container(
+                                height: 200,
+                                width: 200,
+                                color: Colors.deepPurpleAccent,
+                              ),
+                            ),
+                            Center(
+                              child: Container(
+                                height: 200,
+                                width: 200,
+                                color: Colors.amber,
+                              ),
+                            ),
+                            Center(
+                              child: Container(
+                                height: 200,
+                                width: 200,
+                                color: Colors.blueAccent,
+                              ),
+                            ),
+                            Center(
+                              child: Container(
+                                height: 200,
+                                width: 200,
+                                color: Colors.deepOrangeAccent,
+                              ),
+                            ),
+                            Center(
+                              child: Container(
+                                height: 200,
+                                width: 200,
+                                color: Colors.deepPurpleAccent,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      height: 200,
+                      color: Colors.blueAccent,
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      height: 200,
+                      color: Colors.deepOrangeAccent,
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      height: 200,
+                      color: Colors.deepPurpleAccent,
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      height: 200,
+                      color: Colors.amber,
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      height: 200,
+                      color: Colors.blueAccent,
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      height: 200,
+                      color: Colors.deepOrangeAccent,
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      height: 200,
+                      color: Colors.deepPurpleAccent,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        )
 
       ////////// InkWell ////////////////////
+        /*
         InkWell(
           onLongPress: (){
             print("Long Pressed on Container");
@@ -72,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ),
           ),
-        )
+        ) */
 
 
             /*
