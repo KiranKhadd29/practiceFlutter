@@ -40,6 +40,42 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
+
+      ////////// InkWell ////////////////////
+        InkWell(
+          onLongPress: (){
+            print("Long Pressed on Container");
+          },
+          onDoubleTap: (){
+            print("Double tapped on Container");
+          },
+          onTap: (){
+            print("Double tapped on Container");
+          },
+          child: Center(
+            child: Container(
+              height: 200,
+              width: 200,
+              color: Colors.amber,
+              child: Center(
+                child: InkWell(
+                  onTap: (){
+                    print("This is Text using InkWell");
+                  },
+                  child: Text(
+                    "Click Here",
+                    style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700),
+
+                  )
+                )
+                
+            ),
+            ),
+          ),
+        )
+
+
+            /*
       ////////// Row ////////////////////
       Container(
         height: 300,
@@ -94,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
             )
           ],
         ),
-      )
+      ) */
 
         ////////// Images ////////////////////
         /*Center(
