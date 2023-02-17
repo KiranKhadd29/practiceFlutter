@@ -36,14 +36,28 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text('Flutter Container'),
       ),
-      body:Center(
+      //Flutter container
+      /*body:Center(
         child: Container(
           width: 100,
           height: 100,
           color: Colors.amber,
           child: Text("Welcome to Flutter!!"),
         ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),*/ // This trailing comma makes auto-formatting nicer for build methods.
+      //center widget
+      /*body: Center(
+        child: Text("Hello World!!!",style: TextStyle(fontSize: 25),),
+      )*/
+      body: Center(
+
+        child: Container(
+            width: 250,
+            height: 100,
+            color: Colors.pinkAccent,
+          child: Center(child: Text('This is center container.',style: TextStyle(color: Colors.black,fontSize: 20),))
+        ),
+      ),
     );
   }
 }
