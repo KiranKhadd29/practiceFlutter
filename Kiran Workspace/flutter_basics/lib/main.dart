@@ -41,8 +41,68 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
+      ////////// Expanded Widget ////////////////////
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            flex: 4,
+            child: Container(
+              height: 100,
+              width: 100,
+              decoration: BoxDecoration(
+                color: Colors.deepOrange,
+                border: Border.all(
+                    width: 2,
+                    color: Colors.black
+                ),
+              ),
+            ),
+          ),
+          Container(
+            height: 100,
+            width: 100,
+            decoration: BoxDecoration(
+            color: Colors.white,
+              border: Border.all(
+                  width: 2,
+                  color: Colors.black
+              ),
+            ),
+            child: Container(
+              height: 30,
+              width: 30,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                shape: BoxShape.circle,
+                border: Border.all(
+                    width: 2,
+                    color: Colors.black
+                ),
+              )
+
+            ),
+
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              height: 100,
+              width: 100,
+              decoration: BoxDecoration(
+                color: Colors.green,
+                border: Border.all(
+                    width: 2,
+                    color: Colors.black
+                ),
+              ),
+            ),
+          ),
+        ],
+      )
 
       ////////// Container Decoration ////////////////////
+        /*
       Container(
         width: double.infinity,
         height: double.infinity,
@@ -70,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ),
-      )
+      ) */
 
       ////////// Circle Avatar ////////////////////
         /*
@@ -95,8 +155,6 @@ class _MyHomePageState extends State<MyHomePage> {
             maxRadius: 30,
           ),
        ), */
-
-
 
       ////////// List Tile ////////////////////
         /*
