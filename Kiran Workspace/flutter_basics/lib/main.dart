@@ -42,8 +42,38 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body:
 
-      ////////// Circle Avatar ////////////////////
+      ////////// Container Decoration ////////////////////
+      Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.orangeAccent,
+        child: Center(
+          child: Container(
+            width: 150,
+            height: 150,
+            decoration: BoxDecoration(
+              color: Colors.deepPurpleAccent,
+              //borderRadius: BorderRadius.circular(21)
+                borderRadius: BorderRadius.only(topLeft:Radius.circular(15), bottomRight:Radius.circular(15)),
+              border: Border.all(
+                width: 2,
+                color: Colors.green
+              ),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 11,
+                  color: Colors.white38,
+                  spreadRadius: 7
+                ),
+              ],
+              //shape: BoxShape.circle
+            ),
+          ),
+        ),
+      )
 
+      ////////// Circle Avatar ////////////////////
+        /*
        Padding(
          padding: const EdgeInsets.only(left: 20, right: 20, top: 30, bottom: 40),
          child: CircleAvatar(
@@ -64,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
             backgroundColor: Colors.black87,
             maxRadius: 30,
           ),
-       ),
+       ), */
 
 
 
