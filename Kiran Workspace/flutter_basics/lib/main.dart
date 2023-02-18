@@ -40,7 +40,21 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
+
+        ////////// Padding and Margin ////////////////////
+        /*
+        Container(
+          color: Colors.amber,
+          margin: EdgeInsets.all(11),
+          child: Padding(
+            padding: EdgeInsets.only(top: 20,bottom:30 ,left:25 ,right:30 ),
+            child: Text("Padding and Mrgin ", style: TextStyle(fontSize:25), selectionColor:Colors.black87),
+
+          ),
+        )
+          */
         ////////// Scroll View ////////////////////
+        /*
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: SingleChildScrollView(
@@ -163,7 +177,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-        )
+        )*/
 
       ////////// InkWell ////////////////////
         /*
@@ -200,8 +214,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ) */
 
 
-            /*
+
       ////////// Row ////////////////////
+      /*
       Container(
         height: 300,
         /*
