@@ -30,6 +30,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var arrNames = ['Sayali','Kiran','Kiya','Siya','Kiyansh'];
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -196,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
       //scrollview
-      body: Padding(
+      /*body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
           child: Column(
@@ -278,6 +279,82 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
+      ),*/
+      //Listview
+      /*body: Center(
+        child: ListView(
+          //scrollDirection: Axis.horizontal,
+          //reverse: true,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Sayali',style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Kiran',style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Kiya',style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Kiyansh',style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Siya',style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Siyansh',style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
+            )
+          ],
+        ),
+      ),*/
+      //Listview.Builder
+      /*body: ListView.builder(itemBuilder: (context, index) {
+        return Text(arrNames[index],style: TextStyle(fontSize: 20, fontWeight:  FontWeight.bold),);
+      },
+        itemCount: arrNames.length,
+        itemExtent: 200,
+        scrollDirection: Axis.horizontal,
+        //reverse: true,
+      ),*/
+      //Listview.Separated
+      body: ListView.separated(itemBuilder: (context, index) {
+        return Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Text(arrNames[index],style: TextStyle(fontSize: 30, fontWeight:  FontWeight.bold),),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(arrNames[index],style: TextStyle(fontSize: 20, fontWeight:  FontWeight.bold),),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(arrNames[index],style: TextStyle(fontSize: 20, fontWeight:  FontWeight.bold),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(arrNames[index],style: TextStyle(fontSize: 10, fontWeight:  FontWeight.bold),),
+            )
+          ],
+        );
+      },
+        itemCount: arrNames.length,
+        //scrollDirection: Axis.horizontal,
+        separatorBuilder: (context, index) {
+          return Divider(height: 200,thickness: 1,);
+        },
+        //reverse: true,
       ),
     );
   }
