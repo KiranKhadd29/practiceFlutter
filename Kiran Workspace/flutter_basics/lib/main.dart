@@ -33,6 +33,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var arrnames = ['Kiran','Sayali','Kiya','Kiyansh','Siya','Siyansh'];
     return Scaffold(
         appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
@@ -40,6 +41,85 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
+
+      ////////// List Tile ////////////////////
+
+      ListView.separated(itemBuilder: (context, index){
+        return ListTile(
+          leading: Text('${index+1}'),
+          title: Text(arrnames[index]),
+          subtitle: Text('Number'),
+          trailing: Icon(Icons.add),
+        );
+      }, separatorBuilder: (context , index){
+        return Divider(height: 30,thickness: 5,);
+      },
+          itemCount: arrnames.length,
+      )
+
+      ////////// List View Separated ////////////////////
+        /*
+        ListView.separated(itemBuilder: (context, index){
+        return(Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(arrnames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold)),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(arrnames[index], style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(arrnames[index], style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+            ),
+          ],
+        ));
+        },
+          itemCount: arrnames.length,
+          separatorBuilder: (context, index) {
+          return Divider(height: 50,thickness: 4,);
+          },
+        ) */
+
+        ////////// List View Builder ////////////////////
+        /*
+        ListView.builder(itemBuilder: (context, index){
+        return(Text(arrnames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold)));
+        },
+          itemCount: arrnames.length,
+          itemExtent: 100,
+
+        ) */
+        
+      ////////// List View ////////////////////
+        /*
+      ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("One", style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Two", style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Three", style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Four", style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Five", style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),),
+          )
+        ],
+      ) */
 
         ////////// Padding and Margin ////////////////////
         /*
