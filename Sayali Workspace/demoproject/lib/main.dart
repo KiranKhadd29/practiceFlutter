@@ -92,13 +92,77 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),*/
       //Add image in app
-      body: Center(
+      /*body: Center(
         child: Container(
             width: 200,
             height: 200,
             child: Image.asset('assets/images/ksiyaa.png')
         ),
-      )
+      )*/
+      //Column
+      body: Container(
+        //width: 300,
+        height: 300,
+        child: Column(
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                /*Column(
+                  children: [
+                    ElevatedButton(onPressed: (){
+
+                    }, child: Text('Click Me')),
+                    ElevatedButton(onPressed: (){
+
+                    }, child: Text('Click Me'))
+                  ],
+                ),*/
+                Text("A1",style: TextStyle(fontSize: 30),),
+                Text("B1",style: TextStyle(fontSize: 30),),
+                Text("C1",style: TextStyle(fontSize: 30),),
+                Text("D1",style: TextStyle(fontSize: 30),),
+                Text("E1",style: TextStyle(fontSize: 30),),
+              ],
+            ),
+            Text("A",style: TextStyle(fontSize: 30),),
+            Text("B",style: TextStyle(fontSize: 30),),
+            Text("C",style: TextStyle(fontSize: 30),),
+            Text("D",style: TextStyle(fontSize: 30),),
+            Text("E",style: TextStyle(fontSize: 30),),
+            ElevatedButton(onPressed: (){
+
+            }, child: Text('Click'))
+          ],
+        ),
+      ),
+      //Rows
+      /*body: Container(
+        height: 300,
+        child: Row(
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          //mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("A",style: TextStyle(fontSize: 30),),
+            Text("B",style: TextStyle(fontSize: 30),),
+            Text("C",style: TextStyle(fontSize: 30),),
+            Text("D",style: TextStyle(fontSize: 30),),
+            Text("E",style: TextStyle(fontSize: 30),),
+            ElevatedButton(onPressed: (){
+
+              }, child: Text('Click'))
+          ],
+        ),
+      ),*/
     );
   }
 }
