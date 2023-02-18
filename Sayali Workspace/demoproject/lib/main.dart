@@ -100,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       )*/
       //Column
-      body: Container(
+      /*body: Container(
         //width: 300,
         height: 300,
         child: Column(
@@ -139,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
             }, child: Text('Click'))
           ],
         ),
-      ),
+      ),*/
       //Rows
       /*body: Container(
         height: 300,
@@ -163,6 +163,38 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),*/
+      //Inkwell
+      body: Center(
+        child: InkWell(
+          onTap: () {
+            print('Tapped');
+          },
+          onLongPress: () {
+            print('Long Pressed');
+          },
+          onDoubleTap: () {
+            print('Double Pressed');
+          },
+          child: Container(
+            width: 200,
+            height: 200,
+            color: Colors.cyanAccent,
+            child: Center(
+                child: InkWell(
+                  onTap: () {
+                    print('Clicked on text');
+                  },
+                    child: Text(
+                      'Click here',
+                      style: TextStyle(
+                          fontSize: 21,fontWeight: FontWeight.bold,color: Colors.black
+                          ),
+                    )
+                )
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
