@@ -42,8 +42,34 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body:
 
-      ////////// List Tile ////////////////////
+      ////////// Circle Avatar ////////////////////
 
+       Padding(
+         padding: const EdgeInsets.only(left: 20, right: 20, top: 30, bottom: 40),
+         child: CircleAvatar(
+            child: Container(
+              height: 40,
+              width: 40,
+              child: Column(
+                children: [
+                    Container(
+                      height: 40,
+                      width: 40,
+                        child: Image.asset('assets/images/boy.png'),
+                       ),
+                  //Text("Boy", style: TextStyle(fontSize: 5, fontWeight: FontWeight.bold),)
+                ],
+              ),
+            ),
+            backgroundColor: Colors.black87,
+            maxRadius: 30,
+          ),
+       ),
+
+
+
+      ////////// List Tile ////////////////////
+        /*
       ListView.separated(itemBuilder: (context, index){
         return ListTile(
           leading: Text('${index+1}'),
@@ -55,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
         return Divider(height: 30,thickness: 5,);
       },
           itemCount: arrnames.length,
-      )
+      ) */
 
       ////////// List View Separated ////////////////////
         /*
@@ -293,8 +319,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ) */
 
-
-
       ////////// Row ////////////////////
       /*
       Container(
@@ -360,7 +384,6 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Image.asset('assets/images/kiyalogosmall.png')),
             )*/
 
-
         ////////// Buttons ////////////////////
         /*TextButton(
           child: Text('Click Here'),
@@ -383,7 +406,6 @@ class _MyHomePageState extends State<MyHomePage> {
             print('User taped the O-Button');
           },
           )*/
-
 
       ////////// Text Widget ////////////////////
         /*Text("Hi, I'm a Text Widget",
