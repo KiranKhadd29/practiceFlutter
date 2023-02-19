@@ -30,7 +30,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var arrNames = ['Sayali','Kiran','Kiya','Siya','Kiyansh'];
+    var arrNames = ['Sayali','Kiran','Kiya','Siya','Kiyansh','Siyansh','Kiyara','Kiyasa'];
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -323,7 +323,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //reverse: true,
       ),*/
       //Listview.Separated
-      body: ListView.separated(itemBuilder: (context, index) {
+      /*body: ListView.separated(itemBuilder: (context, index) {
         return Row(
           children: [
             Padding(
@@ -353,6 +353,22 @@ class _MyHomePageState extends State<MyHomePage> {
         //scrollDirection: Axis.horizontal,
         separatorBuilder: (context, index) {
           return Divider(height: 200,thickness: 1,);
+        },
+        //reverse: true,
+      ),*/
+      //List Tile in ListView
+      body: ListView.separated(itemBuilder: (context, index) {
+        return ListTile(
+          //leading: Text('${index+1}'),
+          title: Text(arrNames[index]),
+          subtitle: Text('Number'),
+          trailing: Icon(Icons.add_box_outlined),
+        );
+      },
+        itemCount: arrNames.length,
+        //scrollDirection: Axis.horizontal,
+        separatorBuilder: (context, index) {
+          return Divider(height: 50,thickness: 4,);
         },
         //reverse: true,
       ),
