@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/ui_helper/text_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        textTheme: TextTheme(
+        headline1: TextStyle(fontSize: 21, fontWeight: FontWeight.bold, fontFamily: 'practiceFont001'),
+          subtitle1: TextStyle(fontSize: 11, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic ),
+        ),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -41,13 +46,29 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
+         ////////// Theme and Style ////////////////////
+        Column(
+          children: [
+            Text("Theme Headline 01", style: Theme.of(context).textTheme.headline1!.copyWith(color: Colors.red), ),
+            Text("Theme Subtitle 01", style: Theme.of(context).textTheme.subtitle1, ),
+            Text("Theme Headline 02", style: Theme.of(context).textTheme.headline1!.copyWith(color: Colors.green), ),
+            Text("Theme Subtitle 02", style: Theme.of(context).textTheme.subtitle1, ),
+            Text("UI_Helper 1" , style: KiranTS15(),),
+            Text("UI_Helper 2" , style: KiranTS25(),),
+          ],
+        )
+
+
+
       ////////// Card Widget ////////////////////
+        /*
         Center(child: Card(
           elevation: 15,
             child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text("Card Widget", style: TextStyle(fontSize: 25, fontFamily: 'practiceFont001'),),
         )))
+        */
       ////////// Custom Font ////////////////////
         /*
       Text("Hey, I am a New Font", style: TextStyle(fontSize: 25, fontFamily: 'practiceFont001'),)
