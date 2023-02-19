@@ -36,6 +36,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var emailText = TextEditingController();
+  var mobNumber = TextEditingController();
+  var passwordText = TextEditingController();
   @override
   Widget build(BuildContext context) {
     var arrnames = ['Kiran','Sayali','Kiya','Kiyansh','Siya','Siyansh'];
@@ -46,7 +49,142 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
+
+      ////////// User Input ////////////////////
+      Center(
+          child: Container(
+            width: 300,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Join Us", style: TextStyle(color: Colors.blue, fontSize: 50, fontFamily: 'practiceFont001'),),
+                  TextField(
+                    keyboardType: TextInputType.emailAddress,
+                    controller: emailText,
+                //enabled: false,                          // For disable field
+                    decoration: InputDecoration(
+                      hintText: "Enter the Email ID here",
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                          color: Colors.deepOrange,
+                          width: 1,
+                        ),
+                      ),
+
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                          color: Colors.green,
+                          width: 1,
+                        ),
+                      ),
+                      disabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 1,
+                        ),
+                      ),
+                      suffixText: "User Name Exists",
+                      suffixIcon: IconButton(
+                        icon: Icon(Icons.remove_red_eye, color: Colors.deepOrange,),   //Added red eye press icon
+                        onPressed: (){
+                        },
+                      ),
+                      prefixIcon: Icon(Icons.email, color: Colors.deepOrange,)
+                    ),
+                  ),
+                  Container(
+                    height: 11,
+                  ),
+                  TextField(
+                    keyboardType: TextInputType.phone,
+                    controller: mobNumber,
+                    //enabled: false,                          // For disable field
+                    decoration: InputDecoration(
+                        hintText: "Enter the Mobile Number here",
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                            color: Colors.deepOrange,
+                            width: 1,
+                          ),
+                        ),
+
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                            color: Colors.green,
+                            width: 1,
+                          ),
+                        ),
+                        disabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                            color: Colors.grey,
+                            width: 1,
+                          ),
+                        ),
+                        suffixText: "Number already exists",
+                        suffixIcon: IconButton(
+                          icon: Icon(Icons.remove_red_eye, color: Colors.deepOrange,),   //Added red eye press icon
+                          onPressed: (){
+                          },
+                        ),
+                        prefixIcon: Icon(Icons.phone, color: Colors.deepOrange,)
+                    ),
+                  ),
+                  Container(
+                    height: 11,
+                  ),
+                  TextField(
+                    controller: passwordText,
+                    obscureText: true,                   // Hide the Text
+                   // obscuringCharacter: "*",             // Hide the text and user mannualy i.e. *
+                    decoration: InputDecoration(
+                      hintText: "Enter the Password here",
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                            color: Colors.deepOrange
+                        ),
+                      ),
+                        suffixText: "Password Incorrect",
+                        suffixIcon: IconButton(
+                          icon: Icon(Icons.remove_red_eye, color: Colors.deepOrange,),   //Added red eye press icon
+                          onPressed: (){
+                          },
+                        ),
+                        prefixIcon: Icon(Icons.lock, color: Colors.deepOrange,)
+
+                    ),
+                  ),
+                  Container(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ElevatedButton(
+                        onPressed:(){
+                          String userEmail = emailText.toString();
+                          String userMob = mobNumber.text;
+                          String userPassword = passwordText.text;
+
+                          print("Email = $userEmail,Mobile Number = $userMob , Password = $userPassword");
+                      },
+                          child: Text(
+                        'Login',
+                      ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+          ),
+      ),
+
+
         ////////// Theme and Style ////////////////////
+        /*
         Column(
           children: [
             Text("Theme Headline 01", style: Theme.of(context).textTheme.headline1!.copyWith(color: Colors.red), ),
@@ -56,7 +194,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Text("UI_Helper 1" , style: KiranTS15(),),
             Text("UI_Helper 2" , style: KiranTS25(),),
           ],
-        )
+        ) */
 
       ////////// Card Widget ////////////////////
       /*
