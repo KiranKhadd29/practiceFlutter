@@ -357,7 +357,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //reverse: true,
       ),*/
       //List Tile in ListView
-      body: ListView.separated(itemBuilder: (context, index) {
+      /*body: ListView.separated(itemBuilder: (context, index) {
         return ListTile(
           //leading: Text('${index+1}'),
           title: Text(arrNames[index]),
@@ -371,6 +371,28 @@ class _MyHomePageState extends State<MyHomePage> {
           return Divider(height: 50,thickness: 4,);
         },
         //reverse: true,
+      ),*/
+      //Circle avatar
+      body: CircleAvatar(
+        child: Container(
+          width: 50,
+          height: 50,
+          child: Column(
+            children: [
+              Container(
+                  width: 30,
+                  height: 30,
+                  child: Image.asset('assets/images/boy.png')),
+              Text('Name',style: TextStyle(color: Colors.black),)
+            ],
+          ),
+        ),
+        //child: Text('Name',style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),),
+        //backgroundImage: AssetImage('assets/images/boy.png'),
+        backgroundColor: Colors.green,
+        //radius: 100,
+        //minRadius: 50,
+        maxRadius: 50,
       ),
     );
   }
