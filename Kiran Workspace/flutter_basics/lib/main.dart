@@ -41,9 +41,17 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
-      ////////// Expanded Widget ////////////////////
+      ////////// Card Widget ////////////////////
+        Center(child: Card(
+          elevation: 15,
+            child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text("Card Widget", style: TextStyle(fontSize: 25, fontFamily: 'practiceFont001'),),
+        )))
+      ////////// Custom Font ////////////////////
+        /*
       Text("Hey, I am a New Font", style: TextStyle(fontSize: 25, fontFamily: 'practiceFont001'),)
-
+        */
 
       ////////// Expanded Widget ////////////////////
         /*
