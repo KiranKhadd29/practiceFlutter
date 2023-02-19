@@ -42,6 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body:
       ////////// Expanded Widget ////////////////////
+      Text("Hey, I am a New Font", style: TextStyle(fontSize: 25, fontFamily: 'practiceFont001'),)
+
+
+      ////////// Expanded Widget ////////////////////
+        /*
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -99,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ],
-      )
+      ) */
 
       ////////// Container Decoration ////////////////////
         /*
