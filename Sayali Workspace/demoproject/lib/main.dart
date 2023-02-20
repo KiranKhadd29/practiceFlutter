@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Margin and padding'),
+        title: Text('Custom Font'),
       ),
       //Flutter container
       /*body:Center(
@@ -506,13 +506,17 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Text("Margin and Padding",style: TextStyle(fontSize: 25),),
       ),*/
       //Margin + padding
-      body: Container(
+      /*body: Container(
         color: Colors.blueGrey,
           margin: EdgeInsets.all(30),
           child: Padding(
             padding: EdgeInsets.only(top: 30,left: 20),
             child: Text("Margin and Padding",style: TextStyle(fontSize: 25,color: Colors.black,fontWeight: FontWeight.bold),),
           )
+      ),*/
+      //Custom fonts
+      body: Text(
+        'Sayali k k',style: TextStyle(fontFamily: 'FontPlayfairDisplay',fontWeight: FontWeight.bold,fontSize: 30),
       ),
     );
   }
