@@ -30,7 +30,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var arrNames = ['Sayali','Kiran','Kiya','Siya','Kiyansh','Siyansh','Kiyara','Kiyasa'];
+    //var arrNames = ['Sayali','Kiran','Kiya','Siya','Kiyansh','Siyansh','Kiyara','Kiyasa'];
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -373,7 +373,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //reverse: true,
       ),*/
       //Circle avatar
-      body: CircleAvatar(
+      /*body: CircleAvatar(
         child: Container(
           width: 50,
           height: 50,
@@ -393,6 +393,37 @@ class _MyHomePageState extends State<MyHomePage> {
         //radius: 100,
         //minRadius: 50,
         maxRadius: 50,
+      ),*/
+      //Container Decoration
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.grey,
+        child: Center(
+          child: Container(
+            width: 200,
+            height: 150,
+            //color: Colors.greenAccent,
+            decoration: BoxDecoration(
+              color: Colors.lightBlueAccent,
+              //borderRadius: BorderRadius.circular(50)
+              borderRadius: BorderRadius.only(topLeft:Radius.circular(50),bottomRight: Radius.circular(50)),
+              //borderRadius: BorderRadius.all(Radius.circular(21))
+              border: Border.all(
+                width: 2,
+                color: Colors.black
+              ),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 21,
+                  color: Colors.white,
+                  spreadRadius:11
+                )
+              ],
+              //shape: BoxShape.circle
+            ),
+          ),
+        ),
       ),
     );
   }
