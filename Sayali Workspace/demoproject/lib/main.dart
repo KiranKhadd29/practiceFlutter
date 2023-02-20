@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Flutter Container'),
+        title: Text('Flutter Expanded Widget'),
       ),
       //Flutter container
       /*body:Center(
@@ -395,7 +395,7 @@ class _MyHomePageState extends State<MyHomePage> {
         maxRadius: 50,
       ),*/
       //Container Decoration
-      body: Container(
+      /*body: Container(
         width: double.infinity,
         height: double.infinity,
         color: Colors.grey,
@@ -424,6 +424,80 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ),
+      ),*/
+      //Expanded widget for row
+      /*body: Row(
+        //mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            flex: 2,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.blue,
+            ),
+          ),
+          Expanded(
+            flex: 4,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.orange,
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.grey,
+            ),
+          ),
+          Expanded(
+            child: Container(
+                width: 50,
+                height: 100,
+                color: Colors.green,
+            ),
+          ),
+        ],
+      ),*/
+      //Expanded widget for column
+      body: Column(
+        //mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            flex: 2,
+            child: Container(
+              //width: 150,
+              height: 100,
+              color: Colors.blue,
+            ),
+          ),
+          Expanded(
+            flex: 4,
+            child: Container(
+              //width: 150,
+              height: 100,
+              color: Colors.orange,
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              //width: 150,
+              height: 100,
+              color: Colors.grey,
+            ),
+          ),
+          Expanded(
+            child: Container(
+              //width: 150,
+              height: 100,
+              color: Colors.green,
+            ),
+          ),
+        ],
       ),
     );
   }
