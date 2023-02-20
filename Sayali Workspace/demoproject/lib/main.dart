@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Flutter Expanded Widget'),
+        title: Text('Margin and padding'),
       ),
       //Flutter container
       /*body:Center(
@@ -463,7 +463,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),*/
       //Expanded widget for column
-      body: Column(
+      /*body: Column(
         //mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
@@ -498,6 +498,21 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ],
+      ),*/
+      //padding
+      /*body: Padding(
+        //padding: EdgeInsets.only(top: 11,left: 30),
+        padding: EdgeInsets.all(30),
+        child: Text("Margin and Padding",style: TextStyle(fontSize: 25),),
+      ),*/
+      //Margin + padding
+      body: Container(
+        color: Colors.blueGrey,
+          margin: EdgeInsets.all(30),
+          child: Padding(
+            padding: EdgeInsets.only(top: 30,left: 20),
+            child: Text("Margin and Padding",style: TextStyle(fontSize: 25,color: Colors.black,fontWeight: FontWeight.bold),),
+          )
       ),
     );
   }
