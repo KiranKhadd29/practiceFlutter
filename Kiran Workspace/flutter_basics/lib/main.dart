@@ -42,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     var arrnames = ['Kiran','Sayali','Kiya','Kiyansh','Siya','Siyansh'];
+    var todayTime = DateTime.now();
     return Scaffold(
         appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
@@ -49,8 +50,33 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
+      ////////// Get Current Date & Time ////////////////////
+      
+      Center(
+        child: Container(
+          height: 200,
+          width: 200,
+          child: Column(
+            children: [
+              Center(
+                child: Text(" Today-\n Time: ${todayTime.hour}:${todayTime.minute}:${todayTime.second}\n"
+                    " Date: ${todayTime.day}/${todayTime.month}/${todayTime.year}",
+                  style: TextStyle(fontSize: 25),),
+              ),
+              ElevatedButton(onPressed:(){
+                setState(() {
+                });
+
+
+              }, child: Text('Update To Latest'))
+            ],
+          ),
+        ),
+      )
+
 
       ////////// User Input ////////////////////
+        /*
       Center(
           child: Container(
             width: 300,
@@ -180,7 +206,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
           ),
-      ),
+      ), */
 
 
         ////////// Theme and Style ////////////////////
