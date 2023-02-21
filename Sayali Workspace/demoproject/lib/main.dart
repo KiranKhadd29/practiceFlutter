@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
-        textTheme: TextTheme(
+        //primarySwatch: Colors.lightGreen,
+        /*textTheme: TextTheme(
             displayMedium: TextStyle(fontSize: 21,fontWeight: FontWeight.bold,),
             titleSmall:  TextStyle(fontSize: 11,fontWeight: FontWeight.w500,fontStyle: FontStyle.italic),
-        ),
+        ),*/
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -37,11 +37,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     //var arrNames = ['Sayali','Kiran','Kiya','Siya','Kiyansh','Siyansh','Kiyara','Kiyasa'];
+    var time = DateTime.now();
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Card Widget'),
+        title: Text('Date and time'),
       ),
       //Flutter container
       /*body:Center(
@@ -535,7 +536,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),*/
       //Card widget
-      body: Center(
+      /*body: Center(
         child: Card(
           shadowColor: Colors.orange,
           elevation: 12,
@@ -543,6 +544,24 @@ class _MyHomePageState extends State<MyHomePage> {
                padding: const EdgeInsets.all(8.0),
                child: Text('Card Widget',style: TextStyle(fontSize: 21),),
             )),
+      ),*/
+      //get current date and time
+      body: Center(
+        child: Container(
+          width: 200,
+          height: 200,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Current Time: ${time.hour}:${time.minute}:${time.second}',style: TextStyle(fontSize: 25),),
+              ElevatedButton(onPressed: () {
+                setState(() {
+
+                });
+              }, child: Text('Current Time'))
+            ],
+          ),
+        ),
       ),
     );
   }
