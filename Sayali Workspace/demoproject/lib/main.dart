@@ -1,3 +1,4 @@
+import 'package:demoproject/ui_helper/util.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +15,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primarySwatch: Colors.lightGreen,
+        textTheme: TextTheme(
+            displayMedium: TextStyle(fontSize: 21,fontWeight: FontWeight.bold,),
+            titleSmall:  TextStyle(fontSize: 11,fontWeight: FontWeight.w500,fontStyle: FontStyle.italic),
+        ),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -35,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Custom Font'),
+        title: Text('Styles and Themes'),
       ),
       //Flutter container
       /*body:Center(
@@ -515,8 +521,18 @@ class _MyHomePageState extends State<MyHomePage> {
           )
       ),*/
       //Custom fonts
-      body: Text(
+      /*body: Text(
         'Sayali k k',style: TextStyle(fontFamily: 'FontPlayfairDisplay',fontWeight: FontWeight.bold,fontSize: 30),
+      ),*/
+      //styles and themes
+      body: Column(
+        children: [
+          Text('Styles and Themes 1',style: mTextStyle2(textColor: Colors.orange)),
+          Text('Styles and Themes 2',style: Theme.of(context).textTheme.titleSmall),
+          Text('Styles and Themes 3',style: Theme.of(context).textTheme.displayMedium!.copyWith(color: Colors.deepOrange)),
+          Text('Styles and Themes 4',style: mTextStyle1()),
+          Text('Styles and Themes 5',style: TextStyle(fontSize: 31,fontWeight: FontWeight.w300,fontStyle: FontStyle.normal,color: Colors.lightBlue),),
+        ],
       ),
     );
   }
