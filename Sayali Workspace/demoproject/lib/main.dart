@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Styles and Themes'),
+        title: Text('Card Widget'),
       ),
       //Flutter container
       /*body:Center(
@@ -525,7 +525,7 @@ class _MyHomePageState extends State<MyHomePage> {
         'Sayali k k',style: TextStyle(fontFamily: 'FontPlayfairDisplay',fontWeight: FontWeight.bold,fontSize: 30),
       ),*/
       //styles and themes
-      body: Column(
+      /*body: Column(
         children: [
           Text('Styles and Themes 1',style: mTextStyle2(textColor: Colors.orange)),
           Text('Styles and Themes 2',style: Theme.of(context).textTheme.titleSmall),
@@ -533,6 +533,16 @@ class _MyHomePageState extends State<MyHomePage> {
           Text('Styles and Themes 4',style: mTextStyle1()),
           Text('Styles and Themes 5',style: TextStyle(fontSize: 31,fontWeight: FontWeight.w300,fontStyle: FontStyle.normal,color: Colors.lightBlue),),
         ],
+      ),*/
+      //Card widget
+      body: Center(
+        child: Card(
+          shadowColor: Colors.orange,
+          elevation: 12,
+            child: Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Text('Card Widget',style: TextStyle(fontSize: 21),),
+            )),
       ),
     );
   }
