@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/ui_helper/text_theme.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,6 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
   var emailText = TextEditingController();
   var mobNumber = TextEditingController();
   var passwordText = TextEditingController();
+
+  var selectedDate;
   @override
   Widget build(BuildContext context) {
     var arrnames = ['Kiran','Sayali','Kiya','Kiyansh','Siya','Siyansh'];
@@ -50,8 +53,50 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
-      ////////// Get Current Date & Time ////////////////////
+      ////////// Date & Time Picker ////////////////////
+
+      Center(
+        child: Container(
+          child: Column(
+            children: [
+              Text("Select Date", style: TextStyle(fontSize: 15),),
+              ElevatedButton(onPressed: () async {
+                final DateTime? datePicked = await showDatePicker(
+                    context: context,
+                  initialDate: selectedDate,
+                  //  initialDate: DateTime.now(),
+                    firstDate: DateTime(2021),
+                    lastDate: DateTime(2023),
+
+                );
+                if(datePicked != null && datePicked != selectedDate){
+                  setState(() {
+                    selectedDate = datePicked;
+                    //print('Date Selected: ${datePicked.day} ${datePicked.month} ${datePicked.year}');
+                  });
+                }
+              }, child: Text("Show Date")
+              ),
+            Text("Select Time", style: TextStyle(fontSize: 15),),
+            ElevatedButton(onPressed: () async {
+              TimeOfDay? timePicked = await showTimePicker(
+                  context: context,
+                  initialTime: TimeOfDay.now(),
+                initialEntryMode: TimePickerEntryMode.dial
+              );
+              
+              if(timePicked!=null){
+                print('Time Selected: ${timePicked.hour}:${timePicked.minute}');
+              }
+            }, child: Text("Show Time"))
+            ],
+          ),
+        ),
+      )
       
+
+      ////////// Get Current Date & Time ////////////////////
+      /*
       Center(
         child: Container(
           height: 200,
@@ -59,20 +104,23 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: [
               Center(
+                child: Text(" Today-\n Date: ${DateFormat('EEE, M/d/y').format(todayTime)}",
+                  style: TextStyle(fontSize: 15),),  // Date Formate
+
+                /*
                 child: Text(" Today-\n Time: ${todayTime.hour}:${todayTime.minute}:${todayTime.second}\n"
                     " Date: ${todayTime.day}/${todayTime.month}/${todayTime.year}",
                   style: TextStyle(fontSize: 25),),
+                */
               ),
               ElevatedButton(onPressed:(){
                 setState(() {
                 });
-
-
               }, child: Text('Update To Latest'))
             ],
           ),
         ),
-      )
+      ) */
 
 
       ////////// User Input ////////////////////
