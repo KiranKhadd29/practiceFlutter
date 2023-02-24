@@ -1,3 +1,4 @@
+import 'package:custum_widget_project/widgets/rounded_btn.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,16 +35,38 @@ class MyHomePage extends StatelessWidget {
         title: Text("Custom Widget"),
       ),
       body:
-      Container(
-        child: Column(
-          children: [
-            //CatItems(),
-            Contacts()
-            //SubItemView2(),
-            //BottomMenu()
-          ],
-        ),
-      ),
+      Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            width: 150,
+            height: 50,
+            child: RoundedButton(
+                btnName: "Login",
+              icon: Icon(Icons.lock),
+              callback: (){
+                  print("Logged In!!!");
+              },
+              textStyle: TextStyle(fontSize: 21),
+            ),
+          ),
+          Container(
+            height: 11,
+          ),
+          Container(
+            width: 150,
+            height: 50,
+            child: RoundedButton(
+              btnName: "Play",
+              icon: Icon(Icons.play_arrow),
+              callback: (){
+                print("I am playing!!!");
+              },
+              textStyle: TextStyle(fontSize: 21),
+            ),
+          )
+        ],
+      )
     );
   }
 }
@@ -71,7 +94,7 @@ class MyHomePage extends StatelessWidget {
     );
   }
 } */
-class Contacts extends StatelessWidget{
+/* class Contacts extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -96,7 +119,7 @@ class Contacts extends StatelessWidget{
       ),
     );
   }
-}
+} */
 /* class SubCatItems extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
