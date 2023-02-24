@@ -707,7 +707,7 @@ class _MyHomePageState extends State<MyHomePage> {
           )
       ),*/
       //Grid View .count and .extent
-      body: Column(
+      /*body: Column(
         children: [
           Container(
             height: 200,
@@ -748,7 +748,23 @@ class _MyHomePageState extends State<MyHomePage> {
             ],),
           )
         ],
-      ),
+      ),*/
+      //Grid View .builder
+      body: GridView.builder(
+        /*gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          crossAxisSpacing: 11,
+          mainAxisSpacing: 11,
+         ),*/
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 100,
+          crossAxisSpacing: 11,
+          mainAxisSpacing: 11,
+        ),
+        itemBuilder: (context, index) {
+            return Container(color: arrColors[index],);
+            },
+        itemCount: arrColors.length,),
     );
   }
 }
