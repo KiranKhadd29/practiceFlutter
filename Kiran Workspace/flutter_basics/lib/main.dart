@@ -57,6 +57,34 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
+      ////////// Stack ////////////////////
+
+      Container(
+        height: 300,
+        width: 300,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Stack(
+            children: [
+              Positioned(
+                top: 21,
+                left: 21,
+                child: Container(
+                  height: 250,
+                  width: 250,
+                  color: Colors.black,
+                ),
+              ),
+              Container(
+                height: 250,
+                width: 250,
+                color: Colors.grey,
+              ),
+            ],
+          ),
+        ),
+      )
+
       ////////// CallBack Function ////////////////////
         /*
       ElevatedButton(
@@ -78,8 +106,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
         ),
       */
-
-
 
       ////////// Grid View ////////////////////
       /*

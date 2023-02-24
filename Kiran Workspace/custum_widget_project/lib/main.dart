@@ -21,6 +21,9 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  /*var arrColors = [Colors.blue, Colors.grey, Colors.deepOrange, Colors.green, Colors.red, Colors.black,
+    Colors.deepPurpleAccent, Colors.orange, Colors.pink];
+  var arrnames = ['Kiran','Sayali','Kiya','Kiyansh','Siya','Siyansh']; */
 
   @override
   Widget build(BuildContext context) {
@@ -34,15 +37,17 @@ class MyHomePage extends StatelessWidget {
       Container(
         child: Column(
           children: [
-            CatItems(),Contacts(),SubCatItems(),BottomMenu()
+            //CatItems(),
+            Contacts()
+            //SubItemView2(),
+            //BottomMenu()
           ],
         ),
       ),
-
     );
   }
 }
-class CatItems extends StatelessWidget{
+/*class CatItems extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -65,7 +70,7 @@ class CatItems extends StatelessWidget{
       ),
     );
   }
-}
+} */
 class Contacts extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -92,7 +97,7 @@ class Contacts extends StatelessWidget{
     );
   }
 }
-class SubCatItems extends StatelessWidget{
+/* class SubCatItems extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -115,8 +120,8 @@ class SubCatItems extends StatelessWidget{
       ),
     );
   }
-}
-class BottomMenu extends StatelessWidget{
+} */
+/*class BottomMenu extends StatelessWidget{
   var arrColors = [Colors.blue, Colors.grey, Colors.deepOrange, Colors.green, Colors.red, Colors.black,
     Colors.deepPurpleAccent, Colors.orange, Colors.pink];
   @override
@@ -139,4 +144,29 @@ class BottomMenu extends StatelessWidget{
       ),
     );
   }
-}
+} */
+/*class SubItemView2 extends StatelessWidget{
+  var arrnames = ['Kiran','Sayali','Kiya','Kiyansh','Siya','Siyansh'];
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 3,
+      child: Container(
+          color: Colors.black,
+          child: ListView.separated(itemBuilder: (context, index){
+            return ListTile(
+              leading: Text('${index+1}'),
+              title: Text(arrnames[index]),
+              subtitle: Text('Number'),
+              trailing: Icon(Icons.add),
+            );
+          }, separatorBuilder: (context , index){
+            return Divider(height: 30,thickness: 5,);
+          },
+            itemCount: arrnames.length,
+          )
+      ),
+    );
+  }
+
+} */
