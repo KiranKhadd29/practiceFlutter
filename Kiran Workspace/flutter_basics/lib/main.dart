@@ -57,8 +57,124 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Flutter Basics'),
         ),
         body:
-      ////////// Stack ////////////////////
+        ////////// Wrap Widget ////////////////////
 
+        Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: Wrap(
+            direction: Axis.horizontal,
+            alignment: WrapAlignment.spaceEvenly,
+            spacing: 11,
+            runSpacing: 11,
+            children: [
+            Container(
+            height: 80,
+            width: 80,
+            color: Colors.grey,
+            ),
+            Container(
+            height: 80,
+            width: 80,
+            color: Colors.black,
+            ),
+            Container(
+            height: 80,
+            width: 80,
+            color: Colors.green,
+            ),
+            Container(
+            height: 80,
+            width: 80,
+            color: Colors.teal,
+            ),
+            Container(
+            height: 80,
+            width: 80,
+            color: Colors.amberAccent,
+            ),
+            Container(
+            height: 80,
+            width: 80,
+            color: Colors.brown,
+            ),
+            Container(
+            height: 80,
+            width: 80,
+            color: Colors.pink,
+            ),
+            Container(
+            height: 80,
+            width: 80,
+            color: Colors.deepPurpleAccent,
+            ),
+            Container(
+            height: 80,
+            width: 80,
+            color: Colors.blueAccent,
+            ),
+            Container(
+            height: 80,
+            width: 80,
+            color: Colors.lime,
+            ),
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.grey,
+              ),
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.black,
+              ),
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.green,
+              ),
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.teal,
+              ),
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.amberAccent,
+              ),
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.brown,
+              ),
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.pink,
+              ),
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.deepPurpleAccent,
+              ),
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.blueAccent,
+              ),
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.lime,
+              ),
+            ],
+          ),
+        )
+
+
+      ////////// Stack ////////////////////
+      /*
       Container(
         height: 300,
         width: 300,
@@ -83,7 +199,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
-      )
+      ) */
 
       ////////// CallBack Function ////////////////////
         /*
