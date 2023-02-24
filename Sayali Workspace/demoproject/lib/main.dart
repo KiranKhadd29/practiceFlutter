@@ -1,6 +1,6 @@
-import 'package:demoproject/ui_helper/util.dart';
+//import 'package:demoproject/ui_helper/util.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+//import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,13 +39,22 @@ class _MyHomePageState extends State<MyHomePage> {
   var passText = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    var arrColors =[Colors.redAccent,
+      Colors.orangeAccent,
+      Colors.grey,
+      Colors.blueAccent,
+      Colors.pinkAccent,
+      Colors.greenAccent,
+      Colors.purpleAccent,
+      Colors.cyanAccent,
+    ];
     //var arrNames = ['Sayali','Kiran','Kiya','Siya','Kiyansh','Siyansh','Kiyara','Kiyasa'];
-    var time = DateTime.now();
+    //var time = DateTime.now();
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Login page'),
+        title: Text('GridView'),
       ),
       //Flutter container
       /*body:Center(
@@ -626,7 +635,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
       //Adding text input widgets(textfield)
-      body: Center(
+      /*body: Center(
           child: Container(
             width: 300,
             child: Column(
@@ -696,6 +705,49 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           )
+      ),*/
+      //Grid View .count and .extent
+      body: Column(
+        children: [
+          Container(
+            height: 200,
+            child: GridView.count(
+              crossAxisCount: 4,
+              mainAxisSpacing: 11,
+              crossAxisSpacing: 11,
+              children: [
+                Container(color: arrColors[0],),
+                Container(color: arrColors[1],),
+                Container(color: arrColors[2],),
+                Container(color: arrColors[3],),
+                Container(color: arrColors[4],),
+                Container(color: arrColors[5],),
+                Container(color: arrColors[6],),
+                Container(color: arrColors[7],),
+              ],
+            ),
+          ),
+          Container(
+            height: 100,
+          ),
+          Container(
+            height: 200,
+            child: GridView.extent(
+              maxCrossAxisExtent: 50,
+              crossAxisSpacing: 11,
+              mainAxisSpacing: 11,
+            children: [
+              Container(color: arrColors[0],),
+              Container(color: arrColors[1],),
+              Container(color: arrColors[2],),
+              Container(color: arrColors[3],),
+              Container(color: arrColors[4],),
+              Container(color: arrColors[5],),
+              Container(color: arrColors[6],),
+              Container(color: arrColors[7],),
+            ],),
+          )
+        ],
       ),
     );
   }
