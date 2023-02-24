@@ -35,6 +35,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var emailText = TextEditingController();
+  var passText = TextEditingController();
   @override
   Widget build(BuildContext context) {
     //var arrNames = ['Sayali','Kiran','Kiya','Siya','Kiyansh','Siyansh','Kiyara','Kiyasa'];
@@ -43,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Date and time'),
+        title: Text('Login page'),
       ),
       //Flutter container
       /*body:Center(
@@ -591,7 +593,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //Dateformat patterns
       ),*/
       //date picker
-      body: Center(
+      /*body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -622,6 +624,78 @@ class _MyHomePageState extends State<MyHomePage> {
             }, child: Text('Selected Time'))
           ],
         ),
+      ),*/
+      //Adding text input widgets(textfield)
+      body: Center(
+          child: Container(
+            width: 300,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                //Text('LogIn'),
+                TextField(
+                  controller: emailText,
+                   //enabled: false,
+                   decoration: InputDecoration(
+                     hintText: 'Enter E-mail here..',
+                     focusedBorder: OutlineInputBorder(
+                         borderRadius: BorderRadius.circular(11),
+                         borderSide: BorderSide(
+                             color: Colors.deepOrange,
+                           width: 2,
+                         )
+                     ),
+                     enabledBorder: OutlineInputBorder(
+                         borderRadius: BorderRadius.circular(11),
+                         borderSide: BorderSide(
+                           color: Colors.green,
+                           width: 2,
+                         )
+                     ),
+                     disabledBorder: OutlineInputBorder(
+                           borderRadius: BorderRadius.circular(11),
+                           borderSide: BorderSide(
+                             color: Colors.black26,
+                             width: 2,
+                           )
+                       ),
+                     //suffixText: "UserName exists" ,
+                     suffixIcon: IconButton(
+                       icon: Icon(Icons.remove_red_eye,color: Colors.orange,),
+                       onPressed: (){
+
+                       },
+                     ),
+                     prefixIcon: Icon(
+                       Icons.email,color: Colors.orange,
+                     )
+                   ),
+                ),
+                Container(height: 11,),
+                TextField(
+                  keyboardType: TextInputType.number,
+                  controller: passText,
+                  obscureText: true,
+                  obscuringCharacter: '*',
+                  decoration: InputDecoration(
+                    hintText: 'Enter Password here..',
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                              color: Colors.deepOrange
+                          )
+                      )
+                  ),
+                ),
+                ElevatedButton(onPressed: (){
+                  String uEmail = emailText.text.toString();
+                  String uPass = passText.text;
+
+                  print("Email: $uEmail, Pass: $uPass");
+                }, child: Text('Login'))
+              ],
+            ),
+          )
       ),
     );
   }
