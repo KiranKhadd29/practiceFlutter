@@ -1,4 +1,6 @@
 //import 'package:demoproject/ui_helper/util.dart';
+import 'package:demoproject/ui_helper/util.dart';
+import 'package:demoproject/widgets/rounded_btn.dart';
 import 'package:flutter/material.dart';
 //import 'package:intl/intl.dart';
 
@@ -35,16 +37,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-  callback() {
+  /*callback() {
     print('Clicked!!!');
-  }
-
-  var emailText = TextEditingController();
-  var passText = TextEditingController();
+  }*/
+  //var emailText = TextEditingController();
+  //var passText = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    var arrColors =[Colors.redAccent,
+    /*var arrColors =[Colors.redAccent,
       Colors.orangeAccent,
       Colors.grey,
       Colors.blueAccent,
@@ -52,14 +52,14 @@ class _MyHomePageState extends State<MyHomePage> {
       Colors.greenAccent,
       Colors.purpleAccent,
       Colors.cyanAccent,
-    ];
+    ];*/
     //var arrNames = ['Sayali','Kiran','Kiya','Siya','Kiyansh','Siyansh','Kiyara','Kiyasa'];
     //var time = DateTime.now();
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Call back function'),
+        title: Text('Custom widget'),
       ),
       //Flutter container
       /*body:Center(
@@ -772,10 +772,46 @@ class _MyHomePageState extends State<MyHomePage> {
         itemCount: arrColors.length,
       ),*/
       //callback function
-      body: ElevatedButton(
+      /*body: ElevatedButton(
         child: Text('Click'),
         onPressed: callback,
-      ),
-    );
+      ),*/
+      //custom widgets
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 150,
+              height: 70,
+              child: RoundedButton(
+                btnName: 'Play',
+                icon: Icon(Icons.play_arrow),
+                //bgColor: ,
+                callback: () {
+                  print('Playing!!!');
+                },
+                textStyle: mTextStyle2(),
+              ),
+            ),
+            Container(
+              height: 50,
+            ),
+            Container(
+              width: 150,
+              height: 70,
+              child: RoundedButton(
+                btnName: 'Press',
+                //icon: Icon(Icons.login),
+                bgColor: Colors.orange,
+                callback: () {
+                  print('Pressed!!!');
+                },
+                textStyle: mTextStyle2(),
+              ),
+            ),
+          ],
+        ),
+      ));
   }
 }
