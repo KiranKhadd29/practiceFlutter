@@ -24,19 +24,20 @@ class MyApp extends StatelessWidget {
             titleSmall:  TextStyle(fontSize: 11,fontWeight: FontWeight.w500,fontStyle: FontStyle.italic),
         ),*/
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+/*class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
   final String title;
   @override
   State<MyHomePage> createState() => _MyHomePageState();
-}
+}*/
 
-class _MyHomePageState extends State<MyHomePage> {
+/*class _MyHomePageState extends State<MyHomePage> {
   /*callback() {
     print('Clicked!!!');
   }*/
@@ -777,7 +778,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: callback,
       ),*/
       //custom widgets
-      body: Center(
+      /*body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -787,7 +788,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: RoundedButton(
                 btnName: 'Play',
                 icon: Icon(Icons.play_arrow),
-                //bgColor: ,
+                bgColor: Colors.indigo,
                 callback: () {
                   print('Playing!!!');
                 },
@@ -812,6 +813,148 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-      ));
+      )
+        */
+    );
+  }
+}*/
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Custom widget'),
+      ),
+        body: Container(
+          child: Column(
+            children: [
+              CatItems(),
+              Contact(),
+              SubCatItems(),
+              BottomMenu()
+            ],
+          ),
+        )
+    );
+  }
+}
+
+class CatItems extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 2,
+      child: Container(
+        color: Colors.blue,
+        child: ListView.builder(itemBuilder: (context, index) => Padding(
+          padding: const EdgeInsets.all(11.0),
+          child: SizedBox(
+            width: 100,
+            child: CircleAvatar(
+              backgroundColor: Colors.green,
+            ),
+          ),
+        ), itemCount: 10, scrollDirection: Axis.horizontal),
+      ),
+    );
+  }
+}
+
+class Contact extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 4,
+      child: Container(
+        color: Colors.orange,
+        child: ListView.builder(itemBuilder: (context, index) => Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListTile(
+            leading: CircleAvatar(
+              backgroundColor: Colors.green,
+            ),
+            title: Text('Name'),
+            subtitle: Text('Mob No'),
+            trailing: Icon(Icons.delete),
+          ),
+        ),),
+      ),
+    );
+  }
+}
+
+class SubCatItems extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 2,
+      child: Container(
+        color: Colors.blueGrey,
+        child: ListView.builder(itemBuilder: (context, index) =>
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                width: 200,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(11),
+                  color: Colors.blue,
+                ),
+              ),
+            ), itemCount: 10, scrollDirection: Axis.horizontal,),
+      ),
+    );
+  }
+}
+
+class BottomMenu extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 2,
+      child: Container(
+        color: Colors.green,
+        child: GridView.count(
+          crossAxisCount: 4,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(11),
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(11),
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(11),
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(11),
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+          ],),
+      ),
+    );
   }
 }
