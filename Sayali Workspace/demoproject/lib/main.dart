@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Stack widget'),
+        title: Text('Icon widget'),
       ),
       //Flutter container
       /*body:Center(
@@ -815,7 +815,7 @@ class _MyHomePageState extends State<MyHomePage> {
       )
         */
       //Stack widget
-      body: Container(
+      /*body: Container(
         width: 300,
         height: 300,
         child: Stack(
@@ -835,6 +835,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ],
+        ),
+      ),*/
+      //Icon widget
+      body: Center(
+        child: Icon(
+          Icons.play_circle_outline,
+          size: 100,
+          color: Colors.green,
         ),
       ),
     );
