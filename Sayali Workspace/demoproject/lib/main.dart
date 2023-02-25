@@ -10,7 +10,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -24,20 +23,20 @@ class MyApp extends StatelessWidget {
             titleSmall:  TextStyle(fontSize: 11,fontWeight: FontWeight.w500,fontStyle: FontStyle.italic),
         ),*/
       ),
-      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: MyHomePage(),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      //home: MyHomePage(),
     );
   }
 }
 
-/*class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
   final String title;
   @override
   State<MyHomePage> createState() => _MyHomePageState();
-}*/
+}
 
-/*class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage> {
   /*callback() {
     print('Clicked!!!');
   }*/
@@ -60,7 +59,7 @@ class MyApp extends StatelessWidget {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Custom widget'),
+        title: Text('Stack widget'),
       ),
       //Flutter container
       /*body:Center(
@@ -815,9 +814,35 @@ class MyApp extends StatelessWidget {
         ),
       )
         */
+      //Stack widget
+      body: Container(
+        width: 300,
+        height: 300,
+        child: Stack(
+          children: [
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.blueGrey,
+            ),
+            Positioned(
+              left: 21,
+              top: 21,
+              child: Container(
+                width: 200,
+                height: 200,
+                color: Colors.grey,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
-}*/
+}
+
+//Splitting the app into widgets
+/*
 
 class MyHomePage extends StatelessWidget {
   @override
@@ -958,3 +983,5 @@ class BottomMenu extends StatelessWidget {
     );
   }
 }
+
+ */
