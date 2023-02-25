@@ -35,6 +35,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  callback() {
+    print('Clicked!!!');
+  }
+
   var emailText = TextEditingController();
   var passText = TextEditingController();
   @override
@@ -54,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('GridView'),
+        title: Text('Call back function'),
       ),
       //Flutter container
       /*body:Center(
@@ -750,7 +755,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),*/
       //Grid View .builder
-      body: GridView.builder(
+      /*body: GridView.builder(
         /*gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
           crossAxisSpacing: 11,
@@ -764,7 +769,13 @@ class _MyHomePageState extends State<MyHomePage> {
         itemBuilder: (context, index) {
             return Container(color: arrColors[index],);
             },
-        itemCount: arrColors.length,),
+        itemCount: arrColors.length,
+      ),*/
+      //callback function
+      body: ElevatedButton(
+        child: Text('Click'),
+        onPressed: callback,
+      ),
     );
   }
 }
