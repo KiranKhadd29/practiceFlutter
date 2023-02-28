@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Font awesome Icon'),
+        title: Text('Wrap widget'),
       ),
       //Flutter container
       /*body:Center(
@@ -847,7 +847,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
       //Font awesome icon
-      body: Center(
+      /*body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -858,6 +858,84 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             SizedBox(width: 11,),
             FaIcon(FontAwesomeIcons.googlePay,size: 100,color: Colors.orange,)
+          ],
+        ),
+      ),*/
+      //Wrap widget
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Wrap(
+          //direction: Axis.vertical,
+          spacing: 11,
+          runSpacing: 11,
+          alignment: WrapAlignment.center,
+          children: [
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.blue,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.orange,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.brown,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.green,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.red,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.orange,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.brown,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.green,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.red,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.orange,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.brown,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.green,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.red,
+            ),
           ],
         ),
       ),
