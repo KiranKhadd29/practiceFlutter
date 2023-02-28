@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Wrap widget'),
+        title: Text('SizedBox'),
       ),
       //Flutter container
       /*body:Center(
@@ -862,7 +862,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
       //Wrap widget
-      body: Container(
+      /*body: Container(
         width: double.infinity,
         height: double.infinity,
         child: Wrap(
@@ -938,6 +938,75 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
+      ),*/
+      //sizedBox
+        //child: ConstrainedBox(
+         /*constraints: BoxConstraints(
+            minWidth: 100,
+            minHeight: 20,
+            maxHeight: 50,
+            maxWidth: 200
+          ),*/
+         /*child: SizedBox(
+              width: 200,
+              height: 50,
+              child: ElevatedButton(
+                onPressed: () {
+
+                },
+                child: Text('Click'),
+              ),
+            ),*/
+         /*child: SizedBox.expand(
+              child: ElevatedButton(
+                onPressed: () {
+
+                },
+                child: Text('Click'),
+              ),
+            ),*/
+         /*child: SizedBox.shrink(
+              child: ElevatedButton(
+                onPressed: () {
+
+                },
+                child: Text('Click'),
+              ),
+            ),*/
+         /*child: SizedBox.square(
+          dimension: 200,
+          child: ElevatedButton(
+            onPressed: () {
+
+            },
+            child: Text('Click'),
+          ),
+        ),*/
+        //),
+      body: Wrap(
+        children: [
+          SizedBox.square(
+            dimension: 100,
+            child: ElevatedButton(
+              onPressed: (){
+
+              },
+              child: Text('Click'),
+            ),
+          ),
+          SizedBox(
+            width: 20,
+          ),
+          SizedBox.square(
+            dimension: 100,
+            child: ElevatedButton(
+              onPressed: (){
+
+              },
+              child: Text('Click'),
+            ),
+          ),
+        ],
       ),
     );
   }
