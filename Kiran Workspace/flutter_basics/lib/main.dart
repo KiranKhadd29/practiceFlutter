@@ -57,8 +57,37 @@ class _MyHomePageState extends State<MyHomePage> {
             title: Text('Flutter Basics'),
           ),
           body:
-        ////////// Sized Box ////////////////////
 
+        ////////// Rich Text ////////////////////
+        RichText(
+            text: TextSpan(
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 21,
+              ),
+              children: <TextSpan>[
+              TextSpan(text:'Hello '),
+                TextSpan(text:'World!' ,
+                  style: TextStyle(
+                  color: Colors.pink,
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                ),),
+                TextSpan(text:'\n Welecome to'),
+                TextSpan(text:' Flutter',
+                  style: TextStyle(
+                    fontFamily: 'Monoton-Regular',
+                    color: Colors.pink,
+                    fontSize: 55,
+                    fontWeight: FontWeight.bold,
+
+                  ),),
+              ],
+            ),
+        ),
+
+        ////////// Sized Box ////////////////////
+        /*
         Wrap(
           children: [
 
@@ -98,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
 
         ),
-
+          */
 
 
           ////////// Wrap Widget ////////////////////
