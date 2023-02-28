@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/ui_helper/text_theme.dart';
 import 'package:intl/intl.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,13 +59,22 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           body:
 
-        ////////// Icon Widget ////////////////////
+        ////////// Icon & Font Awesome Icon Widget ////////////////////
 
         Center(
-          child: Icon(
-            Icons.note_add_sharp,
-            size: 55,
-            color: Colors.pink,
+          child: Row(
+            children: [
+              Icon(
+                Icons.note_add_sharp,
+                size: 55,
+                color: Colors.pink,
+              ),
+              FaIcon(
+                FontAwesomeIcons.noteSticky,
+                size: 55,
+                color: Colors.brown,
+              ),
+            ],
           ),
         ),
 
