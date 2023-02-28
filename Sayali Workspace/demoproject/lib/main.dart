@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('SizedBox'),
+        title: Text('Rich text'),
       ),
       //Flutter container
       /*body:Center(
@@ -940,7 +940,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
       //sizedBox
-        //child: ConstrainedBox(
+      /* //child: ConstrainedBox(
          /*constraints: BoxConstraints(
             minWidth: 100,
             minHeight: 20,
@@ -1007,6 +1007,30 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ],
+      ),*/
+      //Rich text
+      body: Center(
+        child: RichText(
+          text: TextSpan(
+            style: TextStyle(color: Colors.grey,fontSize: 21),
+            children: <TextSpan>[
+              TextSpan(text: 'Hello '),
+              TextSpan(text: 'World!!!',style: TextStyle(
+                fontSize: 24,
+                color: Colors.blue,
+                fontWeight: FontWeight.bold
+              )),
+              TextSpan(text: '   Welcome to'),
+              TextSpan(text: 'Flutter',style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 35,
+                color: Colors.deepOrangeAccent,
+                fontStyle: FontStyle.italic,
+                fontFamily: 'FontPlayfairDisplay'
+              ))
+            ]
+          ),
+        ),
       ),
     );
   }
