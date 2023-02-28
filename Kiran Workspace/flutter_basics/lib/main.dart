@@ -58,6 +58,18 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           body:
 
+        ////////// Icon Widget ////////////////////
+
+        Center(
+          child: Icon(
+            Icons.note_add_sharp,
+            size: 55,
+            color: Colors.pink,
+          ),
+        ),
+
+
+          /*
         ////////// Rich Text ////////////////////
         RichText(
             text: TextSpan(
@@ -85,6 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
         ),
+        */
 
         ////////// Sized Box ////////////////////
         /*
