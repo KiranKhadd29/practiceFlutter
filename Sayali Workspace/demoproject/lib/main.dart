@@ -2,6 +2,7 @@
 import 'package:demoproject/ui_helper/util.dart';
 import 'package:demoproject/widgets/rounded_btn.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 //import 'package:intl/intl.dart';
 
 void main() {
@@ -59,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Icon widget'),
+        title: Text('Font awesome Icon'),
       ),
       //Flutter container
       /*body:Center(
@@ -838,11 +839,26 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
       //Icon widget
-      body: Center(
+      /*body: Center(
         child: Icon(
           Icons.play_circle_outline,
           size: 100,
           color: Colors.green,
+        ),
+      ),*/
+      //Font awesome icon
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.play_circle_outline,
+              size: 80,
+              color: Colors.green,
+            ),
+            SizedBox(width: 11,),
+            FaIcon(FontAwesomeIcons.googlePay,size: 100,color: Colors.orange,)
+          ],
         ),
       ),
     );
