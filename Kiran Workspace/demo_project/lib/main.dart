@@ -53,33 +53,116 @@ class MyHomePage extends StatefulWidget{
 
 class _MyHomePageState extends State<MyHomePage> {
   var _count = 0;
+  var _controller1 = TextEditingController();
+  var _controller2 = TextEditingController();
+  var _num1;
+  var _num2;
+  var _result;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My StateFull Widget"),
+        title: Text("Counter and Calculation App"),
       ),
 
       body:
-      Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Counter: $_count", style: TextStyle(fontSize: 35),),
-            ElevatedButton(
-                onPressed: (){
-                  setState(() {
-                    _count++;
-                  });
+      Wrap(
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Counter: $_count", style: TextStyle(fontSize: 35),),
+              ElevatedButton(
+                  onPressed: (){
+                    setState(() {
+                      _count++;
+                      //_count= _count + 1;
+                      //_count +=1 ;
+                    });
+                  },
+                  child: Text("Increment Count")
+              ),
+              SizedBox(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    color: Colors.purple,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Simple Arithmatic Operation",style: TextStyle(fontSize: 35, color: Colors.white),),
+                            TextField(
+                              keyboardType: TextInputType.number,
+                              controller: _controller1,
+                            ),
+                            TextField(
+                              keyboardType: TextInputType.number,
+                              controller: _controller2,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  ElevatedButton(onPressed: (){
+                                    _num1 = int.parse(_controller1.text.toString());
+                                    _num2 = int.parse(_controller2.text.toString());
+                                    var sum = (_num1+_num2);
+                                    _result = ("The Addition of $_num1 and $_num2 is $sum");
+                                    setState(() {});
+                                  },
+                                      child: Text("Addition")),
 
-                  //_count= _count + 1;
-                  //_count +=1 ;
-                  
-                },
-                child: Text("Increment Count")
-            ),
-          ],
-        ),
+                                  ElevatedButton(onPressed: (){
+                                    _num1 = int.parse(_controller1.text.toString());
+                                    _num2 = int.parse(_controller2.text.toString());
+                                    var sub = (_num1-_num2);
+                                    _result = ("The Substarction of $_num1 and $_num2 is $sub");
+                                    setState(() {});
+                                  },
+                                    child: Text("Substarction"),),
+
+                                  ElevatedButton(onPressed: (){
+                                    _num1 = int.parse(_controller1.text.toString());
+                                    _num2 = int.parse(_controller2.text.toString());
+                                    var mul = (_num1*_num2);
+                                    _result = ("The Multiplication of $_num1 and $_num2 is ${mul.toStringAsFixed(3)}");
+                                    setState(() {});
+                                  },
+                                    child: Text("Multiplication"),),
+                                  ElevatedButton(onPressed: (){
+                                    _num1 = int.parse(_controller1.text.toString());
+                                    _num2 = int.parse(_controller2.text.toString());
+                                    var div = (_num1/_num2);
+                                    _result = ("The Division of $_num1 and $_num2 is ${div.toStringAsFixed(3)}");
+                                    setState(() {});
+                                  },
+                                    child: Text("Division"),),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Result: $_result",style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.amberAccent
+                              ), ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+        ],
+
       )
       ,
 
