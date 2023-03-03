@@ -24,12 +24,12 @@ class MyApp extends StatelessWidget {
             titleSmall:  TextStyle(fontSize: 11,fontWeight: FontWeight.w500,fontStyle: FontStyle.italic),
         ),*/
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      //home: MyHomePage(),
+      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
-
+/*
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
   final String title;
@@ -1035,7 +1035,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
+*/
 //Splitting the app into widgets
 /*
 
@@ -1180,3 +1180,35 @@ class BottomMenu extends StatelessWidget {
 }
 
  */
+//Understanding of stateful and stateless widgets
+class MyHomePage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _MyHomeState();
+  }
+}
+class _MyHomeState extends State<MyHomePage>{
+  var count = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Stateful'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Count: $count',style: TextStyle(fontSize: 30),),
+            ElevatedButton(onPressed: () {
+              count++;
+              setState(() {
+
+              });
+            }, child: Text('Increment Count'))
+          ],
+        ),
+      ),
+    );
+  }
+}
