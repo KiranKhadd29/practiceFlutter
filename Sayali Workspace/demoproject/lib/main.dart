@@ -1,4 +1,5 @@
 //import 'package:demoproject/ui_helper/util.dart';
+import 'package:demoproject/IntroPage.dart';
 import 'package:demoproject/ui_helper/util.dart';
 import 'package:demoproject/widgets/rounded_btn.dart';
 import 'package:flutter/material.dart';
@@ -25,11 +26,11 @@ class MyApp extends StatelessWidget {
         ),*/
       ),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: MyHomePage(),
+      home: IntroPage(),
     );
   }
 }
-/*
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
   final String title;
@@ -60,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Rich text'),
+        title: Text('Hello'),
       ),
       //Flutter container
       /*body:Center(
@@ -1009,7 +1010,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),*/
       //Rich text
-      body: Center(
+      /*body: Center(
         child: RichText(
           text: TextSpan(
             style: TextStyle(color: Colors.grey,fontSize: 21),
@@ -1031,11 +1032,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ]
           ),
         ),
-      ),
+      ),*/
+      //switching one screen to another
+      body: Center(child: Text('Hello',style: TextStyle(fontSize: 34,fontWeight: FontWeight.bold),)),
     );
   }
 }
-*/
+
 //Splitting the app into widgets
 /*
 
@@ -1215,6 +1218,7 @@ class _MyHomeState extends State<MyHomePage>{
 }
 */
 //Arithmetic app
+/*
 class MyHomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -1294,3 +1298,4 @@ class _MyHomeState extends State<MyHomePage>{
     );
   }
 }
+*/
