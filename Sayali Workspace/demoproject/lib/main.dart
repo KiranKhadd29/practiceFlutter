@@ -1,5 +1,6 @@
 //import 'package:demoproject/ui_helper/util.dart';
 import 'package:demoproject/IntroPage.dart';
+import 'package:demoproject/SplashScreen.dart';
 import 'package:demoproject/ui_helper/util.dart';
 import 'package:demoproject/widgets/rounded_btn.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         ),*/
       ),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: IntroPage(),
+      home: SplashScreen(),
     );
   }
 }
@@ -1034,7 +1035,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
       //switching one screen to another
-      body: Center(child: Text('Hello',style: TextStyle(fontSize: 34,fontWeight: FontWeight.bold),)),
+      body: Center(child: Text('Hello',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),)),
     );
   }
 }
