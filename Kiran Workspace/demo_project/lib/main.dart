@@ -1,4 +1,5 @@
 import 'package:demo_project/IntroPage.dart';
+import 'package:demo_project/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: IntroPage(),
+      home: SplashScreen(),
     );
   }
 }
