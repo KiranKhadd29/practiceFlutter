@@ -1,3 +1,4 @@
+import 'package:demo_project/IntroPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: IntroPage(),
     );
   }
 }
@@ -104,43 +105,54 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              child: Wrap(
                                 children: [
-                                  ElevatedButton(onPressed: (){
-                                    _num1 = int.parse(_controller1.text.toString());
-                                    _num2 = int.parse(_controller2.text.toString());
-                                    var sum = (_num1+_num2);
-                                    _result = ("The Addition of $_num1 and $_num2 is $sum");
-                                    setState(() {});
-                                  },
-                                      child: Text("Addition")),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: ElevatedButton(onPressed: (){
+                                      _num1 = int.parse(_controller1.text.toString());
+                                      _num2 = int.parse(_controller2.text.toString());
+                                      var sum = (_num1+_num2);
+                                      _result = ("The Addition of $_num1 and $_num2 is $sum");
+                                      setState(() {});
+                                    },
+                                        child: Text("Addition")),
+                                  ),
 
-                                  ElevatedButton(onPressed: (){
-                                    _num1 = int.parse(_controller1.text.toString());
-                                    _num2 = int.parse(_controller2.text.toString());
-                                    var sub = (_num1-_num2);
-                                    _result = ("The Substarction of $_num1 and $_num2 is $sub");
-                                    setState(() {});
-                                  },
-                                    child: Text("Substarction"),),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: ElevatedButton(onPressed: (){
+                                      _num1 = int.parse(_controller1.text.toString());
+                                      _num2 = int.parse(_controller2.text.toString());
+                                      var sub = (_num1-_num2);
+                                      _result = ("The Substarction of $_num1 and $_num2 is $sub");
+                                      setState(() {});
+                                    },
+                                      child: Text("Substarction"),),
+                                  ),
 
-                                  ElevatedButton(onPressed: (){
-                                    _num1 = int.parse(_controller1.text.toString());
-                                    _num2 = int.parse(_controller2.text.toString());
-                                    var mul = (_num1*_num2);
-                                    _result = ("The Multiplication of $_num1 and $_num2 is ${mul.toStringAsFixed(3)}");
-                                    setState(() {});
-                                  },
-                                    child: Text("Multiplication"),),
-                                  ElevatedButton(onPressed: (){
-                                    _num1 = int.parse(_controller1.text.toString());
-                                    _num2 = int.parse(_controller2.text.toString());
-                                    var div = (_num1/_num2);
-                                    _result = ("The Division of $_num1 and $_num2 is ${div.toStringAsFixed(3)}");
-                                    setState(() {});
-                                  },
-                                    child: Text("Division"),),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: ElevatedButton(onPressed: (){
+                                      _num1 = int.parse(_controller1.text.toString());
+                                      _num2 = int.parse(_controller2.text.toString());
+                                      var mul = (_num1*_num2);
+                                      _result = ("The Multiplication of $_num1 and $_num2 is ${mul.toStringAsFixed(3)}");
+                                      setState(() {});
+                                    },
+                                      child: Text("Multiplication"),),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: ElevatedButton(onPressed: (){
+                                      _num1 = int.parse(_controller1.text.toString());
+                                      _num2 = int.parse(_controller2.text.toString());
+                                      var div = (_num1/_num2);
+                                      _result = ("The Division of $_num1 and $_num2 is ${div.toStringAsFixed(3)}");
+                                      setState(() {});
+                                    },
+                                      child: Text("Division"),),
+                                  ),
                                 ],
                               ),
                             ),
