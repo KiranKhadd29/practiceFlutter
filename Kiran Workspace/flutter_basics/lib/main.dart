@@ -45,12 +45,14 @@ class _MyHomePageState extends State<MyHomePage> {
     print("You're on Call Back Function");
   }
   var selectedDate;
+  RangeValues values = RangeValues(0, 10);
   @override
   Widget build(BuildContext context) {
     var arrnames = ['Kiran','Sayali','Kiya','Kiyansh','Siya','Siyansh'];
     var arrColors = [Colors.blue, Colors.grey, Colors.deepOrange, Colors.green, Colors.red, Colors.black,
       Colors.deepPurpleAccent, Colors.orange, Colors.pink];
     var todayTime = DateTime.now();
+    RangeLabels labels = RangeLabels(values.start.toString(), values.end.toString());
       return Scaffold(
           appBar: AppBar(
             // Here we take the value from the MyHomePage object that was created by
@@ -58,9 +60,27 @@ class _MyHomePageState extends State<MyHomePage> {
             title: Text('Flutter Basics'),
           ),
           body:
+        ////////// Range Slider ////////////////////
+        RangeSlider(
+            values: values,
+            labels: labels,
+            divisions: 10,
+            min: 0,
+            max: 10,
+            activeColor: Colors.green,
+            inactiveColor: Colors.red,
+            onChanged: (newValue){
+              values = newValue;
+              print("${newValue.start}, ${newValue.end}");
+              setState(() {
+
+              });
+
+            },
+        ),
 
         ////////// Icon & Font Awesome Icon Widget ////////////////////
-
+        /*
         Center(
           child: Row(
             children: [
@@ -77,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
-
+        */
 
           /*
         ////////// Rich Text ////////////////////
