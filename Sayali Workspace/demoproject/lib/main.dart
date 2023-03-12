@@ -1,5 +1,6 @@
 //import 'package:demoproject/ui_helper/util.dart';
 import 'package:demoproject/IntroPage.dart';
+import 'package:demoproject/ProfileScreen.dart';
 import 'package:demoproject/SplashScreen.dart';
 import 'package:demoproject/ui_helper/util.dart';
 import 'package:demoproject/widgets/rounded_btn.dart';
@@ -58,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ];*/
     //var arrNames = ['Sayali','Kiran','Kiya','Siya','Kiyansh','Siyansh','Kiyara','Kiyasa'];
     //var time = DateTime.now();
+    var nameController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -1035,7 +1037,32 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),*/
       //switching one screen to another
-      body: Center(child: Text('Hello',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),)),
+      /*body: Center(child: Text('Hello',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),)),*/
+      //passing data from one screen to another
+      body: Center(
+          child: Container(
+            width: 300,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('DashBoard screen',style: TextStyle(
+                    fontSize: 35
+                ),),
+                SizedBox(height: 11,),
+
+                TextField(
+                  controller: nameController,
+                ),
+
+                ElevatedButton(onPressed: (){
+                  Navigator.push(
+                      context,
+                    MaterialPageRoute(builder: (context) => ProfileScreen(nameController.text.toString()),));
+                }, child: Text('MyProfile'))
+              ],
+            ),
+          )
+      ),
     );
   }
 }
