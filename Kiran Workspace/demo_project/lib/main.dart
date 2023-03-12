@@ -60,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
   var _num1;
   var _num2;
   var _result;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,6 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              //Text("Welcome, $nameFromIntro",style: TextStyle(fontSize: 20, color: Colors.purple),),
               Text("Counter: $_count", style: TextStyle(fontSize: 35),),
               ElevatedButton(
                   onPressed: (){
@@ -88,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                    color: Colors.purple,
+                    color: Colors.purpleAccent,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Center(
