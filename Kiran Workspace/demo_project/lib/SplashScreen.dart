@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Center(
         child: Text("KSiyaa Technologies",
           style: TextStyle(
-              fontSize:35,
+              fontSize:25,
             fontWeight: FontWeight.bold,
             color: Colors.purple,
           ),
