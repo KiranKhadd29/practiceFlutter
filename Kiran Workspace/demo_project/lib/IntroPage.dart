@@ -2,6 +2,8 @@ import 'package:demo_project/WelcomePage.dart';
 import 'package:demo_project/main.dart';
 import 'package:flutter/material.dart';
 
+import 'BMICalculatorPage.dart';
+
 class IntroPage extends StatelessWidget{
   var nameController = TextEditingController();
   @override
@@ -48,6 +50,18 @@ class IntroPage extends StatelessWidget{
                     );
                   },
                   child: Text("Switch to Counter & Simple Arithmatic")),
+
+              SizedBox(
+                height: 11,
+              ),
+              ElevatedButton(
+                  onPressed: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context)=> BMICalculatorPage(),
+                      ),
+                    );
+                  },
+                  child: Text("Check your BMI")),
             ],
           ),
         ),
