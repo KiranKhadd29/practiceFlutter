@@ -28,12 +28,12 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("BMI", style: TextStyle(fontSize: 35, color: Colors.purple, fontWeight: FontWeight.bold),),
+                Text("BMI", style: TextStyle(fontSize: 45, color: Colors.purple, fontWeight: FontWeight.bold),),
                 SizedBox(height: 11,),
                 TextField(
                   controller: wtController,
                   decoration: InputDecoration(
-                    label: Text("Enter your weight(KG)"),
+                    label: Text("Enter your weight* (in KG)"),
                     prefixIcon: Icon(Icons.line_weight_outlined),
                   ),
                   keyboardType: TextInputType.number,
@@ -42,7 +42,7 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                 TextField(
                   controller: ftController,
                   decoration: InputDecoration(
-                    label: Text("Enter your height(Foot)"),
+                    label: Text("Enter your height* (in feet)"),
                     prefixIcon: Icon(Icons.height_outlined),
                   ),
                   keyboardType: TextInputType.number,
@@ -51,7 +51,7 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                 TextField(
                   controller: inchController,
                   decoration: InputDecoration(
-                    label: Text("Enter your height(Inch)"),
+                    label: Text("Enter your height* (in inch)"),
                     prefixIcon: Icon(Icons.height_outlined),
                   ),
                   keyboardType: TextInputType.number,
@@ -82,7 +82,7 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                            msg="You are Overweight!!!";
                            bgColor= Colors.red.shade200;
                          }
-                         else if (bmi>25){
+                         else if (bmi<18){
                            msg="You are Underweight!!!";
                            bgColor= Colors.orange.shade200;
                          }
@@ -105,9 +105,6 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                     child: Text("Calculate")),
                 SizedBox(height: 11,),
                 Text(result, style: TextStyle(fontSize: 20),),
-
-
-
 
               ],
             ),

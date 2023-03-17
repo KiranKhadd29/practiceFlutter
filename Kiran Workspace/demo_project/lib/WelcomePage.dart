@@ -10,16 +10,19 @@ class WelcomePage extends StatelessWidget{
         title: Text ("Welcome Page"),
       ),
       body:
-      Center(
+      Container(
+        color: Colors.grey,
+      child: Center(
         child: Container(
-          color: Colors.black87,
           child: Text("Welcome, $introToWelcome",
             style: TextStyle(
                 fontSize: 35,
                 fontWeight: FontWeight.bold,
               color: Colors.purple,
-            ),),
+            ),
+          ),
         ),
+      ),
       ),
     );
   }
