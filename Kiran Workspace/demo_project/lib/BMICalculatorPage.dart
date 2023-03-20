@@ -21,7 +21,26 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
       ),
 
       body: Container(
-        color: bgColor,
+        decoration: BoxDecoration(
+         /* gradient: LinearGradient(
+            colors: [
+              Colors.white38,
+              Colors.black45
+            ],
+            begin: FractionalOffset(1.0, 0.5),
+            end: FractionalOffset(0.0, 0.5),
+          ) */
+            gradient: RadialGradient(
+              colors: [
+                Colors.black38,
+                Colors.black45,
+
+              ],
+              //center: Alignment.bottomLeft,
+              //stops: [0.0, 0.1]
+            )
+
+        ),
         child: Center(
           child: Container(
             width: 300,
